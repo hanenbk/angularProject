@@ -1,0 +1,55 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-3">
+      <h1 class="my-4">Shop Name</h1>
+      <div class="list-group">
+        <a routerLink="/contact" routerLinkActive="active" class="list-group-item active">Category 1</a>
+        <a href="#" class="list-group-item">Category 2</a>
+        <a href="#" class="list-group-item">Category 3</a>
+      </div>
+    </div>
+    <!-- /.col-lg-3 -->
+
+    <div class="col-lg-9">
+
+      <h3 class="card-title">{{ myPhone }}</h3>
+
+     <!-- Two-Way binding -->
+     <label class="control-label">name</label>
+     <input type="text" [(ngModel)]="myPhone">
+     <label class="control-label">price</label>
+     <input type="text" [(ngModel)]=price>
+     <button (click)="addBtn()" title="add phone">add me</button>
+     <input type="text" [disabled]=b>
+     <button (click)="enableInput()" title="enable/disable">click me</button>
+<!--get weadher-->
+<input type="text" placeholder="city" [(ngModel)]="city">
+<input type="text" placeholder="country" [(ngModel)]="country">
+<button (click)="getWeatherBtn()">get weather</button>
+<h1>
+  {{data}}
+</h1>
+     <div class="card mt-4" *ngFor="let phone of phones" >
+       <div class="card-body">
+         <h3 class="card-title">{{ phone.n }}</h3>
+         <h4>{{ phone.p }}</h4>
+         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+         <span class="text-warning">★ ★ ★ ★ ☆</span>
+         4.0 stars
+       </div>
+     </div>
+
+   </div>
+ </div>
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+  </div>
+  <!-- /.container -->
+</footer>
